@@ -16,5 +16,32 @@
  */
   
 function translatePlantLatin(message) {
-    /* Enter your solution here! */
+    /*
+    const vowelReps = {
+        a: 'tiva',
+        e: 'llia',
+        i: 'mus',
+        o: 'phylum',
+        u: 'rea'
+    };
+    */
+   
+    let plMsg = '';
+
+    for (let i = 0; i < message.length; i++) {
+        plMsg += message[i];
+        if (message[i] == 'a' || message[i] == 'A') {
+            plMsg += 'tiva';
+        } else if (message[i] == 'e' || message[i] == 'E') {
+            plMsg += 'llia';
+        } else if (message[i] == 'i' || message[i] == 'I') {
+            plMsg += 'mus';
+        } else if (message[i] == 'o' || message[i] == 'O') {
+            plMsg += 'phylum';
+        } else if (message[i] == 'u' || message[i] == 'U') {
+            plMsg += 'rea';
+        }
+    }
+
+    return plMsg.toLowerCase();
 }
