@@ -14,7 +14,7 @@
  * @return {array} - 2D array representing grid of planted Seeds.
  */ 
   
- function grid(seeds, rows, cols) {
+function grid(seeds, rows, cols) {
     const planted = new Array(rows);
 
     // Create a 2D array for the row x cols grid using 1D array

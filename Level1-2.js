@@ -40,7 +40,7 @@
  * water.
  */
 
- function whereToWater(plantsArray) {
+function whereToWater(plantsArray) {
     const locations = [];
     for (let i = 0; i < plantsArray.length; i++) {
         if (plantsArray[i].needsWater) {

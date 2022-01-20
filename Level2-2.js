@@ -10,7 +10,7 @@
  * @return {string} - Translated message.
  */
 
- function translate(message) {
+function translate(message) {
     const vowelReplacements = {
         tiva: "a",
         llia: "e",
