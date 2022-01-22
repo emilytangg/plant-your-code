@@ -33,16 +33,29 @@ var Plant = class Plant {
  */
     
 function reorderPlants(plants) {
-    let min = 0;
-    let max = 0;
-    const order = [];
+    /* My original solution
+    plants.sort((a, b) => {
+        if (a.height > b.height) {
+            return 1;
+        } else if (a.height < b.height) {
+            return -1;
+        } else {
+            if (a.health > b.health) {
+                return -1;
+            } else if (a.health < b.health) {
+                return 1;
+            }
+        }
+    });
+    */
 
-    for (let i = 0; i < plants.length; i++) {
-        console.log(plants.sort(function(a, b){return a.height - b.height}));
-    }
+    // Simplified solution
+    plants.sort((a, b) => {
+        if (a.height > b.height) return 1;
+        if (a.height < b.height) return -1;
+        if (a.health > b.health) return -1;
+        if (a.health < b.health) return 1;
+    });
     
-
     return plants;
 }
-
-reorderPlants([{height: 4, health: 'average'}, {height: 2, health: 'average'}]);
