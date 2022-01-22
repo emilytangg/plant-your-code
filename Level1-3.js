@@ -14,9 +14,8 @@
  * @param {string} message - The message to be translated in lowercase.
  * @return {string} - Translated Plant-Latin message.
  */
-  
-function translatePlantLatin(message) {
-    /*
+
+ function translatePlantLatin(message) {
     const vowelReps = {
         a: 'tiva',
         e: 'llia',
@@ -24,8 +23,24 @@ function translatePlantLatin(message) {
         o: 'phylum',
         u: 'rea'
     };
-    */
    
+    let plMsg = '';
+    const lowerMsg = message.toLowerCase();
+    
+    for (let i = 0; i < message.length; i++) {
+        plMsg += lowerMsg[i];
+        for (v in vowelReps) {
+            if (v == lowerMsg[i]) {
+                plMsg += vowelReps[v];
+            }
+        }
+    }
+
+    return plMsg;
+}
+
+/* My original solution
+function translatePlantLatin(message) {
     let plMsg = '';
 
     for (let i = 0; i < message.length; i++) {
@@ -45,3 +60,4 @@ function translatePlantLatin(message) {
 
     return plMsg.toLowerCase();
 }
+*/
