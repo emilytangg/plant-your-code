@@ -33,32 +33,32 @@ var Plant = class Plant {
  */
     
 function reorderPlants(plants) {
-    plants.sort((a, b) => {
-        if (a.height > b.height) return 1;
-        if (a.height < b.height) return -1;
-        if (a.health > b.health) return -1;
-        if (a.health < b.health) return 1;
-    });
-    
-    return plants;
+  plants.sort((a, b) => {
+    if (a.height > b.height) return 1;
+    if (a.height < b.height) return -1;
+    if (a.health > b.health) return -1;
+    if (a.health < b.health) return 1;
+  });
+  
+  return plants;
 }
 
 /* My original solution
 function reorderPlants(plants) {
-    plants.sort((a, b) => {
-        if (a.height > b.height) {
-            return 1;
-        } else if (a.height < b.height) {
-            return -1;
-        } else {
-            if (a.health > b.health) {
-                return -1;
-            } else if (a.health < b.health) {
-                return 1;
-            }
-        }
-    });
+  plants.sort((a, b) => {
+    if (a.height > b.height) {
+      return 1;
+    } else if (a.height < b.height) {
+      return -1;
+    } else {
+      if (a.health > b.health) {
+        return -1;
+      } else if (a.health < b.health) {
+        return 1;
+      }
+    }
+  });
 
-    return plants;
+  return plants;
 }
 */

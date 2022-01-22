@@ -15,23 +15,23 @@
  */ 
   
 function grid(seeds, rows, cols) {
-    const planted = new Array(rows);
+  const planted = new Array(rows);
 
-    // Create a 2D array for the row x cols grid using 1D array
-    for (let i = 0; i < rows; i++) {
-        planted[i] = new Array(cols);
-    }
+  // Create a 2D array for the row x cols grid using 1D array
+  for (let i = 0; i < rows; i++) {
+    planted[i] = new Array(cols);
+  }
 
-    // Plant each seed into the grid 
-    let i = 0;
-    while (i < seeds.length) {
-        for (let m = 0; m < rows; m++) {
-            for (let n = 0; n < cols; n++) {
-                planted[m][n] = seeds[i];
-                i++;
-            } 
-        }
+  // Plant each seed into the grid 
+  let i = 0;
+  while (i < seeds.length) {
+    for (let m = 0; m < rows; m++) {
+      for (let n = 0; n < cols; n++) {
+        planted[m][n] = seeds[i];
+        i++;
+      } 
     }
-    
-    return planted;
+  }
+  
+  return planted;
 }

@@ -41,12 +41,12 @@
  */
 
 function whereToWater(plantsArray) {
-    const locations = [];
-    for (let i = 0; i < plantsArray.length; i++) {
-        if (plantsArray[i].needsWater) {
-            locations.push(plantsArray[i].gardenLocation);
-        }
+  const locations = [];
+  for (let i = 0; i < plantsArray.length; i++) {
+    if (plantsArray[i].needsWater) {
+      locations.push(plantsArray[i].gardenLocation);
     }
+  }
 
-    return locations;
+  return locations;
 }

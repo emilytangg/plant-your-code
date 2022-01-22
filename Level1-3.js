@@ -15,49 +15,49 @@
  * @return {string} - Translated Plant-Latin message.
  */
 
- function translatePlantLatin(message) {
-    const vowelReps = {
-        a: 'tiva',
-        e: 'llia',
-        i: 'mus',
-        o: 'phylum',
-        u: 'rea'
-    };
-   
-    let plMsg = '';
-    const lowerMsg = message.toLowerCase();
-    
-    for (let i = 0; i < message.length; i++) {
-        plMsg += lowerMsg[i];
-        for (v in vowelReps) {
-            if (v == lowerMsg[i]) {
-                plMsg += vowelReps[v];
-            }
-        }
+function translatePlantLatin(message) {
+  const vowelReps = {
+    a: 'tiva',
+    e: 'llia',
+    i: 'mus',
+    o: 'phylum',
+    u: 'rea'
+  };
+  
+  let plMsg = '';
+  const lowerMsg = message.toLowerCase();
+  
+  for (let i = 0; i < message.length; i++) {
+    plMsg += lowerMsg[i];
+    for (v in vowelReps) {
+      if (v == lowerMsg[i]) {
+        plMsg += vowelReps[v];
+      }
     }
+  }
 
-    return plMsg;
+  return plMsg;
 }
 
 /* My original solution
 function translatePlantLatin(message) {
-    let plMsg = '';
+  let plMsg = '';
 
-    for (let i = 0; i < message.length; i++) {
-        plMsg += message[i];
-        if (message[i] == 'a' || message[i] == 'A') {
-            plMsg += 'tiva';
-        } else if (message[i] == 'e' || message[i] == 'E') {
-            plMsg += 'llia';
-        } else if (message[i] == 'i' || message[i] == 'I') {
-            plMsg += 'mus';
-        } else if (message[i] == 'o' || message[i] == 'O') {
-            plMsg += 'phylum';
-        } else if (message[i] == 'u' || message[i] == 'U') {
-            plMsg += 'rea';
-        }
+  for (let i = 0; i < message.length; i++) {
+    plMsg += message[i];
+    if (message[i] == 'a' || message[i] == 'A') {
+      plMsg += 'tiva';
+    } else if (message[i] == 'e' || message[i] == 'E') {
+      plMsg += 'llia';
+    } else if (message[i] == 'i' || message[i] == 'I') {
+      plMsg += 'mus';
+    } else if (message[i] == 'o' || message[i] == 'O') {
+      plMsg += 'phylum';
+    } else if (message[i] == 'u' || message[i] == 'U') {
+      plMsg += 'rea';
     }
+  }
 
-    return plMsg.toLowerCase();
+  return plMsg.toLowerCase();
 }
 */

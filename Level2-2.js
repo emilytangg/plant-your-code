@@ -11,22 +11,22 @@
  */
 
 function translate(message) {
-    const vowelReplacements = {
-        tiva: "a",
-        llia: "e",
-        mus: "i",
-        phylum: "o",
-        rea: "u"
-    };
-    
-    let translation = message.toLowerCase();
-    for (let v in vowelReplacements) {
-        // Is there another way this can be done..?
-        let re = new RegExp(v,"g");
-        translation = translation.replace(re, "");  
-    }
+  const vowelReplacements = {
+    tiva: "a",
+    llia: "e",
+    mus: "i",
+    phylum: "o",
+    rea: "u"
+  };
+  
+  let translation = message.toLowerCase();
+  
+  for (let v in vowelReplacements) {
+    let re = new RegExp(v,"g");
+    translation = translation.replace(re, "");  
+  }
 
-    return translation;
+  return translation;
 }
 
 /**
@@ -42,13 +42,13 @@ function translate(message) {
 */
 
 function searchPlantsForMessage(plants, message) {
-    const matches = [];
+  const matches = [];
 
-    for (let i = 0; i < plants.length; i++) {
-        if (translate(plants[i].message) == message.toLowerCase()) {
-            matches.push(plants[i]);
-        }
+  for (let i = 0; i < plants.length; i++) {
+    if (translate(plants[i].message) == message.toLowerCase()) {
+      matches.push(plants[i]);
     }
+  }
 
-    return matches;
+  return matches;
 }

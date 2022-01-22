@@ -16,7 +16,8 @@
  */
 
 function grid(seedCount) {
-    const rows = Math.round(Math.sqrt(seedCount));
-    const cols = Math.round(seedCount / rows);
-    return [rows, cols];
+  const rows = Math.round(Math.sqrt(seedCount));
+  const cols = Math.round(seedCount / rows);
+  
+  return [rows, cols];
 }
